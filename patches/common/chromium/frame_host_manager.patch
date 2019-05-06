@@ -50,7 +50,7 @@ index 2314c6d1d29ebc61d5156644617e9eb088df5d43..9c75367a173b836027b3b7628b49b363
 +        overriden_site_instance =
 +            candidate_site_instance
 +                ? candidate_site_instance
-+                : SiteInstance::CreateForURL(browser_context,
++                : current_site_instance->GetRelatedSiteInstance(
 +                                             request.common_params().url);
 +        break;
 +      case ContentBrowserClient::SiteInstanceForNavigationType::FORCE_CURRENT:
